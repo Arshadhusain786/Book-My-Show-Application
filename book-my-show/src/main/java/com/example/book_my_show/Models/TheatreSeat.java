@@ -5,8 +5,8 @@ import com.example.book_my_show.Enums.SeatType;
 import jakarta.persistence.*;
 import lombok.Data;
 
-@Entity
 @Data
+@Entity
 @Table(name="theatre_seat")
 public class TheatreSeat
 {
@@ -16,10 +16,12 @@ public class TheatreSeat
 
     private String seatNo;
 
+    @Enumerated(value = EnumType.STRING)
     private SeatType seatType;
 
     @ManyToOne
     @JoinColumn
     private Theatre theatre;
+
 
 }
