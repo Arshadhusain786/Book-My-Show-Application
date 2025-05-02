@@ -2,8 +2,13 @@ package com.example.book_my_show.Models;
 
 import com.example.book_my_show.Enums.Genre;
 import com.example.book_my_show.Enums.Language;
+import com.example.book_my_show.Repository.TheatreRepository;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.transaction.TransactionUsageException;
 
 
 import java.util.ArrayList;
@@ -13,6 +18,9 @@ import java.util.List;
 @Data
 @Entity
 @Table(name="movies")
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Movie
 {
     @Id

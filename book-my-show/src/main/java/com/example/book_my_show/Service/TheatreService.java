@@ -17,6 +17,7 @@ public class TheatreService
 {
     @Autowired
     private TheatreRepository theatreRepository;
+
    public String addTheatre(TheatreEntryDto theatreEntryDto)
    {
        //entity that save in db
